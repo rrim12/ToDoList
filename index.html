@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>To Do List</title>
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+            integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+    </head>
+    <body>
+        <div class="bg">
+            <blockquote class="style1">
+                <div id="container">
+                    <h1>To Do List</h1>
+                    <section id="in_box">
+                        <label>오늘 할 일</label>
+                        <input
+                            id="user"
+                            onkeypress="if (event.keyCode == 13) {addTask();}"
+                        />
+                        <a href="#" id="add" class="btn-two purple mini"
+                            ><i class="fa-solid fa-plus"></i
+                        ></a>
+                    </section>
+                    <section>
+                        <ul class="tabs">
+                            <li id="all" class="on">모두</li>
+                            <li id="going">진행중</li>
+                            <li id="done">끝남</li>
+                        </ul>
+                        <div id="taskBoard">
+                            <!-- <div class="task">
+                                <div>집가기</div>
+                                <div>
+                                    <button>check</button>
+                                    <button>delete</button>
+                                </div>
+                            </div> -->
+                        </div>
+                    </section>
+                </div>
+            </blockquote>
+        </div>
+        <script src="js/custom3.js"></script>
+    </body>
+</html>
+<!-- 
+1. 사용자가 값을 입력함
+2. +버튼을 클릭하면 할일이 추가된다
+3. check 버튼을 누르면 밑줄이 간다
+check버튼을 누르면 할일이 끝나면서 밑줄이 간다
+1.check버튼을 클릭하는 순간 true, false
+true이면 끝난걸로 간주 밑줄보임
+3.flase이면 안끝난걸로 간주 드래로 (밑줄없음)
+
+
+delete버튼을 누르면 삭제된다
+1. index번호 같은 리스트 찾기
+2. splice이용 .splace이용(시작위치, 삭제개수)
+
+
+탭을 클릭하면 글자색, 진하게가 변경이됨 on
+forEach문을 이용해서 on삭제
+해당하는 곳에만 on을 삽입
+
+id가 going이면 진행중인 리스트를 보여줌
+isComplete == false
+id가 done이면 끝난 리스트를 보여줌
+isComplete == true
+
+render수정
+선택한 탭에 따라서 리스트를 다르게 보여줘야함
+all ==> taskList
+going, done ==> filterList
+
+선택한 탭에 따라서 보여주는것이 다름
+내가 선택한 탭에 대한 정보는 mode가 가지고 있음
+mode, filterList는 filter함수 뿐만 아니라
+render함수에서도 사용해야함
+그래서 mode,filterList전역변수로 변환
+-->

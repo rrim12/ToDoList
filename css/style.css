@@ -1,0 +1,128 @@
+/* font */
+@font-face {
+    font-family: "omyu_pretty";
+    src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/omyu_pretty.woff2")
+        format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+@import url("https://fonts.googleapis.com/css?family=Satisfy");
+@import url(https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700);
+
+/* ============================================== */
+body {
+    padding: 0px;
+    margin: 0px;
+}
+.bg {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/back_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: center;
+    background-position: center;
+    position: relative;
+}
+
+#container {
+    width: 400px;
+    height: 400px;
+    font-family: "omyu_pretty";
+    margin: 0px auto;
+}
+h1 {
+    text-align: center;
+    margin: 20px 0px;
+    padding-top: 20px;
+    box-sizing: border-box;
+    font-size: 50px;
+}
+#in_box {
+    font-size: 20px;
+    text-align: center;
+}
+input {
+    box-sizing: border-box;
+    padding: 5px 15px;
+    background-color: papayawhip;
+    border-radius: 24px;
+    border: 1px solid #cb99c5;
+}
+.tabs {
+    font-size: 20px;
+    display: flex;
+    gap: 20px;
+    box-sizing: border-box;
+    padding: 10px 40px;
+    border-top: 1px solid palevioletred;
+    border-bottom: 1px solid palevioletred;
+    margin: 20px 0px;
+}
+.tabs li {
+    cursor: pointer;
+}
+.on {
+    color: palevioletred;
+    font-weight: bold;
+}
+.task {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 0px 20px;
+    margin-bottom: 10px;
+    font-size: 25px;
+}
+.task_done {
+    text-decoration: line-through;
+}
+
+/* ======================================= */
+blockquote {
+    max-width: 500px;
+    height: 700px;
+    padding: 2rem 4rem;
+    font-family: "Satisfy", cursive;
+    font-size: 2rem;
+    position: absolute;
+    top: 49%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+}
+.btn.purple,
+.btn-two.purple {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #cb99c5;
+    border-radius: 50%;
+}
+
+/* Button two - I have no creativity for names */
+.btn-two {
+    font-size: 16px;
+    color: white;
+    display: inline-block;
+    border: 1px solid rgba(0, 0, 0, 0.21);
+    border-bottom-color: rgba(0, 0, 0, 0.34);
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.34) inset,
+        0 2px 0 -1px rgba(0, 0, 0, 0.13), 0 3px 0 -1px rgba(0, 0, 0, 0.08),
+        0 3px 13px -1px rgba(0, 0, 0, 0.21);
+}
+.btn-two:active {
+    top: 1px;
+    border-color: rgba(0, 0, 0, 0.34) rgba(0, 0, 0, 0.21) rgba(0, 0, 0, 0.21);
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.89),
+        0 1px rgba(0, 0, 0, 0.05) inset;
+    position: relative;
+}
+button {
+    width: 50px;
+    height: 20px;
+    line-height: 20px;
+    background-color: #cb99c5;
+    border-radius: 24px;
+    border: 1px solid hotpink;
+    cursor: pointer;
+}
